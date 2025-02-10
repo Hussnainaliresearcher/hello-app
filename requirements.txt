@@ -1,5 +1,4 @@
---upgrade pip
-pip==25.0.1
+pip>=25.0.1  # Ensure latest pip but no forced upgrade
 aiohttp==3.8.5
 altair==5.0.1
 blinker==1.6.2
