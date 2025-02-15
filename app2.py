@@ -2,7 +2,7 @@ import streamlit as st
 import os
 from PyPDF2 import PdfReader
 import docx
-from langchain.chat_models import ChatOpenAI
+from langchain_community.chat_models import ChatOpenAI
 from langchain.vectorstores import Qdrant
 import random
 from datetime import datetime
