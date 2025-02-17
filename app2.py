@@ -39,8 +39,9 @@ def main():
         openai_api_key = openapi_key
         # openai_api_key = st.text_input("OpenAI API Key", key=openapi_key , type="password")
         process = st.button("Process")
-        st.spinner('Processing...')
+       
     if process:
+        with st.spinner('Processing...'):
         if not openai_api_key:
             st.info("Please add your OpenAI API key to continue.")
             st.stop()
