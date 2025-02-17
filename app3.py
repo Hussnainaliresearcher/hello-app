@@ -1,14 +1,21 @@
 import streamlit as st
 import os
 from PyPDF2 import PdfReader
-from langchain.chat_models import ChatOpenAI
+import docx
+from langchain_community.chat_models import ChatOpenAI
 from langchain.vectorstores import Qdrant
+import random
+from datetime import datetime
+from langchain import PromptTemplate
 from langchain.chains import RetrievalQA
+import string
+from qdrant_client import QdrantClient
+from dotenv import load_dotenv
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.text_splitter import CharacterTextSplitter
-from langchain.docstore.document import Document
 from streamlit_chat import message
-
+from langchain.callbacks import get_openai_callback
+from langchain.docstore.document import Document
 # Load secrets
 openapi_key = st.secrets["OPENAI_API_KEY"]
 qdrant_url = st.secrets["QDRANT_URL"]
