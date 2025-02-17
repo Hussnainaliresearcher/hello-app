@@ -25,7 +25,7 @@ embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-b
 def main():
     load_dotenv()
     st.set_page_config(page_title="Q/A with your file")
-    st.header("Retrieval QA Chain")
+    st.header("Pakistan Organic Association.")
 
     if "conversation" not in st.session_state:
         st.session_state.conversation = None
