@@ -39,12 +39,13 @@ def main():
         openai_api_key = openapi_key
         # openai_api_key = st.text_input("OpenAI API Key", key=openapi_key , type="password")
         process = st.button("Process")
+    if process:
+    with st.spinner('Processing...'):
+        if not openai_api_key:
+            st.info("Please add your OpenAI API key to continue.")
+            st.stop()  
        
-   if process:
-      with st.spinner('Processing...'):
-          if not openai_api_key:
-             st.info("Please add your OpenAI API key to continue.")
-             st.stop()
+  
 
         text_chunks_list = []
         for uploaded_file in uploaded_files:
