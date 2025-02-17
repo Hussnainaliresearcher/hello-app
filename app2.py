@@ -63,7 +63,7 @@ def main():
             collection_name = "".join(random.choices(string.ascii_letters, k=4)) + curr_date.split('.')[0].replace(':', '-').replace(" ", 'T')
             vectorstore = get_vectorstore(text_chunks_list, collection_name)
 
-            st.write("Vector Store Created...")
+            st.write("you can chat with your file, you just have uploaded..")
 
             # Create QA chain
             num_chunks = 4
