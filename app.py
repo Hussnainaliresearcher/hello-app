@@ -21,7 +21,7 @@ openapi_key = st.secrets["OPENAI_API_KEY"]
 def main():
     load_dotenv()
     st.set_page_config(page_title="Chat with your file")
-    st.header("DocumentGPT")
+    st.header("Pakistan Organic Association")
 
     if "conversation" not in st.session_state:
         st.session_state.conversation = None
