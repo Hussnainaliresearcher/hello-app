@@ -41,7 +41,7 @@ def main():
                 st.info("Please add your OpenAI API key to continue.")
                 st.stop()
         files_text = get_files_text(uploaded_files)
-        st.write("File loaded...")
+        with st.spinner('Processing...'):
         # get text chunks
         text_chunks = get_text_chunks(files_text)
         st.write("file chunks created...")
