@@ -36,9 +36,10 @@ def main():
         # openai_api_key = st.text_input("OpenAI API Key", key=openapi_key , type="password")
         process = st.button("Process")
     if process:
-        if not openai_api_key:
-            st.info("Please add your OpenAI API key to continue.")
-            st.stop()
+        with st.spinner('Processing...'):
+            if not openai_api_key:
+                st.info("Please add your OpenAI API key to continue.")
+                st.stop()
         files_text = get_files_text(uploaded_files)
         st.write("File loaded...")
         # get text chunks
