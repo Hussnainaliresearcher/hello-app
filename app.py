@@ -45,7 +45,7 @@ def main():
 
             # Create vector store
             vectorstore = get_vectorstore(text_chunks)
-            st.write("Vector store created...")
+            st.write("you may chat with your uploaded file.")
 
             # Create conversation chain
             st.session_state.conversation = get_conversation_chain(vectorstore, openai_api_key)
